@@ -49,4 +49,12 @@ If the initial state was to mildly change, for example x(0) = [0.4, 0.6]
 
 ![image](https://github.com/steltze/Electrical-Train-Optimal-Control/assets/79508119/e9461fe2-cf39-4f52-8695-23046f84c511)
 
-The system develops a steady-state error. In order to mitigate that error, 
+The system develops a steady-state error. In order to mitigate that error, we will introduce a feedback correction term
+
+$A(t)=\left.\frac{\partial f}{\partial x}\right|_{(x(t), u(t))} και \mathrm{t} \quad B(t)=\left.\frac{\partial f}{\partial u}\right|_{(x(t), u(t))}$
+
+$A(t) = \left[\begin{array}{cc}0 & 1 \\ 0 & -k_1-2 k_2 x_2(t)\end{array}\right]$
+
+$B(t) = \left[\begin{array}{cc}0 \\ k_3\end{array}\right]$
+
+$\begin{array}{r}J=\mathbf{y}^T\left(t_f\right) S_f \mathbf{y}\left(t_f\right)+\int_0^{t_f}\left(\mathbf{y}^T(t) Q \mathbf{y}(t)+v^2(t)\right) d t \\ S_f=\left[\begin{array}{cc}20 & 0 \\ 0 & 20\end{array}\right],  Q=\left[\begin{array}{cc}2 & 0 \\ 0 & 2\end{array}\right]\end{array}$
