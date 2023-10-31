@@ -29,4 +29,7 @@ $u$: the rotor current of the motor
 Cost function <br/>
 $J=c_1\left(x_1(T)-x_{1 f}\right)^2+c_2 x_2^2(T)+\int_0^T k_4 x_2 u+R u^2 d t$
 
-For $\begin{aligned} & k_1=0,5, k_2=0,1, k_3=1, c_1=c_2=1000, x_{1 f}=10, R=0,3, k_4=10 \quad I_{\min }=-2, \quad I_{\max }=2 \text{ and } \mathrm{l} \\ & T=10\end{aligned}$
+For 
+$$
+\begin{aligned} & k_1=0,5, k_2=0,1, k_3=1, c_1=c_2=1000, x_{1 f}=10, R=0,3, k_4=10 \quad I_{\min }=-2, \quad I_{\max }=2 \text{ and } \mathrm{l} \\ & T=10\end{aligned}
+$$
