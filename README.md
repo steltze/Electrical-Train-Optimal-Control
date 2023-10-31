@@ -3,7 +3,7 @@
 The electrical motor steady-state equations are 
 $V_a = RI_a+\omega (M_{af}I_f)$
 
-`V_a:drum motor voltage` <br\>
+`V_a:drum motor voltage` <br/>
 
 As extracted from the steady-state ofTrain Dynamics Equations
 \begin{aligned}
