@@ -26,7 +26,5 @@ $x_1$: the position of the train <br/>
 $x_2$: the velocity of the train <br/>
 $u$: the rotor current of the motor
 
-Cost functin <br/>
-$$
-J=c_1\left(x_1(T)-x_{1 f}\right)^2+c_2 x_2^2(T)+\int_0^T k_4 x_2 u+R u^2 d t
-$$
+Cost function <br/>
+$J=c_1\left(x_1(T)-x_{1 f}\right)^2+c_2 x_2^2(T)+\int_0^T k_4 x_2 u+R u^2 d t$
