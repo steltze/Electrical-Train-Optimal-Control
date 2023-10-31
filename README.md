@@ -29,4 +29,12 @@ $u$: the rotor current of the motor
 Cost function <br/>
 $J=c_1\left(x_1(T)-x_{1 f}\right)^2+c_2 x_2^2(T)+\int_0^T k_4 x_2 u+R u^2 d t$
 
-For $k_1=0,5, k_2=0,1, k_3=1, c_1=c_2=1000, x_{1 f}=10, R=0,3, k_4=10, I_{\min }=-2, I_{\max }=2, T=10$
+For $k_1=0,5, k_2=0,1, k_3=1, c_1=c_2=1000, x_{1 f}=10, R=0,3, k_4=10, I_{\min }=-2, I_{\max }=2, T=10$, the solution $u$ to the optimal control problem is given the graph
+
+![image](https://github.com/steltze/Electrical-Train-Optimal-Control/assets/79508119/139e8b29-f3de-4306-95ab-7869ce81e844)
+
+If the initial state was to mildly change, for example x(0) = [0.4, 0.6]
+
+![image](https://github.com/steltze/Electrical-Train-Optimal-Control/assets/79508119/e9461fe2-cf39-4f52-8695-23046f84c511)
+
+The system develops a steady-state error
