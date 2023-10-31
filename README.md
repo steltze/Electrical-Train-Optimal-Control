@@ -6,6 +6,7 @@ $V_a = RI_a+\omega (M_{af}I_f)$
 `V_a:drum motor voltage` <br/>
 
 As extracted from the steady-state ofTrain Dynamics Equations
+
 $$
 \begin{aligned}
 & \dot{x}_1=x_2 \\
