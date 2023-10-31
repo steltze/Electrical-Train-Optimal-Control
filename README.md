@@ -35,6 +35,19 @@ $$\dot{\mathbf{x}}=\left[\begin{array}{l}x_1 \\ x_2\end{array}\right]=\left[\beg
 
  $$H=L+\mathbf{p} \cdot(A \mathbf{x}+B u)=k_4 x_2 u+R u^2+p_1 x_2+p_2\left(-k_1 x_2-k_2 x_2^2+k_3 u\right)$$
 
+```math
+\begin{aligned}
+& \dot{\mathbf{p}}=-\frac{\partial H}{\partial \mathbf{x}} \Rightarrow\left\{\begin{array}{l}
+\dot{p}_1=0 \\
+\dot{p}_2=-k_4 u+k_1 x_2-p_1+2 k_2 x_2 p_2
+\end{array}\right. \\
+& \frac{\partial \varphi}{\partial \mathbf{x}}-\mathbf{p}\left(t_f\right)=\mathbf{0} \Rightarrow\left\{\begin{array}{l}
+p_1\left(t_f\right)=2 c_1\left(x_1\left(t_f\right)-x_{1 f}\right) \\
+p_2\left(t_f\right)=2 c_2 x_2\left(t_f\right)
+\end{array}\right.
+\end{aligned}
+```
+
  $u^*=\frac{-\left(k_3 p_2+k_4 x_2\right)}{2 R}$, $u \in\left[I_{\min }, I_{\max }\right]$
 
  $x_{1f} = fixed$
@@ -51,10 +64,32 @@ If the initial state was to mildly change, for example x(0) = [0.4, 0.6]
 
 The system develops a steady-state error. In order to mitigate that error, we will introduce a feedback correction term
 
-$A(t)=\left.\frac{\partial f}{\partial x}\right|_{(x(t), u(t))} και \mathrm{t} \quad B(t)=\left.\frac{\partial f}{\partial u}\right|_{(x(t), u(t))}$
+```math
+A(t)=\left.\frac{\partial f}{\partial x}\right|_{(x(t), u(t))} \quad B(t)=\left.\frac{\partial f}{\partial u}\right|_{(x(t), u(t))}
+```
 
+```math
 $A(t) = \left[\begin{array}{cc}0 & 1 \\ 0 & -k_1-2 k_2 x_2(t)\end{array}\right]$
+```
 
+```math
 $B(t) = \left[\begin{array}{cc}0 \\ k_3\end{array}\right]$
+```
 
-$\begin{array}{r}J=\mathbf{y}^T\left(t_f\right) S_f \mathbf{y}\left(t_f\right)+\int_0^{t_f}\left(\mathbf{y}^T(t) Q \mathbf{y}(t)+v^2(t)\right) d t \\ S_f=\left[\begin{array}{cc}20 & 0 \\ 0 & 20\end{array}\right],  Q=\left[\begin{array}{cc}2 & 0 \\ 0 & 2\end{array}\right]\end{array}$
+```math
+\begin{array}{r}J=\mathbf{y}^T\left(t_f\right) S_f \mathbf{y}\left(t_f\right)+\int_0^{t_f}\left(\mathbf{y}^T(t) Q \mathbf{y}(t)+v^2(t)\right) d t \\ S_f=\left[\begin{array}{cc}20 & 0 \\ 0 & 20\end{array}\right],  Q=\left[\begin{array}{cc}2 & 0 \\ 0 & 2\end{array}\right]\end{array}
+```
+
+After solving the Riccati equation
+
+```math
+\begin{aligned}
+& \dot{P}+P A+A^T P-P B B^T P+Q=0 \\
+& \Rightarrow\left\{\begin{array}{l}
+\dot{P}_{11}=k_3^2 P_{12}^2-2 \\
+\dot{P}_{12}=k_3^2 P_{12} P_{22}-P_{11}-a(t) P_{12} \\
+\dot{P}_{22}=-k_3^2 P_{22}^2-2-2\left(P_{12}+a(t) P_{22}\right)
+\end{array}\right. \\
+& v(y)=-k_3\left(P_{12} y_1(t)+P_{22} y_2(t)\right)
+\end{aligned}
+```
