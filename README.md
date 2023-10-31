@@ -3,7 +3,7 @@
 The electrical motor steady-state equation is  <br/>
 $V_a = RI_a+\omega (M_{af}I_f)$  <br/>
 
-V_a: drum motor voltage <br/>
+`V_a: drum motor voltage` <br/>
 R: resistance of the coil  <br/>
 $\omega$: angular velocity  <br/>
 $M_{af}$: mutual induce stator-rotor  <br/>
