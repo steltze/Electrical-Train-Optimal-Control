@@ -35,8 +35,7 @@ $$\dot{\mathbf{x}}=\left[\begin{array}{l}x_1 \\ x_2\end{array}\right]=\left[\beg
 
  $$H=L+\mathbf{p} \cdot(A \mathbf{x}+B u)=k_4 x_2 u+R u^2+p_1 x_2+p_2\left(-k_1 x_2-k_2 x_2^2+k_3 u\right)$$
 
-$$
-\begin{aligned}
+$$\begin{aligned}
 & \dot{\mathbf{p}}=-\frac{\partial H}{\partial \mathbf{x}} \Rightarrow\left\{\begin{array}{l}
 \dot{p}_1=0 \\
 \dot{p}_2=-k_4 u+k_1 x_2-p_1+2 k_2 x_2 p_2
@@ -45,8 +44,7 @@ $$
 p_1\left(t_f\right)=2 c_1\left(x_1\left(t_f\right)-x_{1 f}\right) \\
 p_2\left(t_f\right)=2 c_2 x_2\left(t_f\right)
 \end{array}\right.
-\end{aligned}
-$$
+\end{aligned}$$
 
  $u^*=\frac{-\left(k_3 p_2+k_4 x_2\right)}{2 R}$, $u \in\left[I_{\min }, I_{\max }\right]$
 
