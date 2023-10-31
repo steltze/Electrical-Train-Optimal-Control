@@ -52,7 +52,7 @@ p_2\left(t_f\right)=2 c_2 x_2\left(t_f\right)
 
  $x_{1f} = fixed$
 
-Computationally
+Computationally, the open-loop solution is
 
 For $k_1=0,5, k_2=0,1, k_3=1, c_1=c_2=1000, x_{1 f}=10, R=0,3, k_4=10, I_{\min }=-2, I_{\max }=2, T=10$, the solution $u$ to the optimal control problem is given the graph
 
@@ -62,18 +62,18 @@ If the initial state was to mildly change, for example x(0) = [0.4, 0.6]
 
 ![image](https://github.com/steltze/Electrical-Train-Optimal-Control/assets/79508119/e9461fe2-cf39-4f52-8695-23046f84c511)
 
-The system develops a steady-state error. In order to mitigate that error, we will introduce a feedback correction term
+The system develops a steady-state error. In order to mitigate that error, we will introduce a feedback correction term (closed-loop solution)
 
 ```math
 A(t)=\left.\frac{\partial f}{\partial x}\right|_{(x(t), u(t))} \quad B(t)=\left.\frac{\partial f}{\partial u}\right|_{(x(t), u(t))}
 ```
 
 ```math
-$A(t) = \left[\begin{array}{cc}0 & 1 \\ 0 & -k_1-2 k_2 x_2(t)\end{array}\right]$
+A(t) = \left[\begin{array}{cc}0 & 1 \\ 0 & -k_1-2 k_2 x_2(t)\end{array}\right]$
 ```
 
 ```math
-$B(t) = \left[\begin{array}{cc}0 \\ k_3\end{array}\right]$
+B(t) = \left[\begin{array}{cc}0 \\ k_3\end{array}\right]
 ```
 
 ```math
@@ -93,3 +93,13 @@ After solving the Riccati equation
 & v(y)=-k_3\left(P_{12} y_1(t)+P_{22} y_2(t)\right)
 \end{aligned}
 ```
+
+By substituting $u \rightarrow u+v$, the position and speed steady-state errors vanish
+
+![image](https://github.com/steltze/Electrical-Train-Optimal-Control/assets/79508119/055f0dde-cf07-4db4-b514-49318c2775bd)
+
+![image](https://github.com/steltze/Electrical-Train-Optimal-Control/assets/79508119/d12759ba-cd6a-44b9-983e-3e89fdba0493)
+
+
+
+
