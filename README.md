@@ -31,7 +31,7 @@ $J=c_1\left(x_1(T)-x_{1 f}\right)^2+c_2 x_2^2(T)+\int_0^T k_4 x_2 u+R u^2 d t$
 
 The theoretical optimal solution is
 
-$\dot{\mathbf{x}}=\left[\begin{array}{l}x_1 \\ x_2\end{array}\right]=\left[\begin{array}{c}x_2 \\ -k_1 x_2-k_2 x_2^2+k_3 u\end{array}\right], \; \mathbf{x}(0)=\mathbf{0}$
+$$\dot{\mathbf{x}}=\left[\begin{array}{l}x_1 \\ x_2\end{array}\right]=\left[\begin{array}{c}x_2 \\ -k_1 x_2-k_2 x_2^2+k_3 u\end{array}\right], \; \mathbf{x}(0)=\mathbf{0}$$
 
  $H=L+\mathbf{p} \cdot(A \mathbf{x}+B u)=k_4 x_2 u+R u^2+p_1 x_2+p_2\left(-k_1 x_2-k_2 x_2^2+k_3 u\right)$
 
