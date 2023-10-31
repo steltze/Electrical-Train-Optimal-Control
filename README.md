@@ -1,11 +1,18 @@
 ## Electrical Train Optimal Control
 
-The electrical motor steady-state equations are 
-$V_a = RI_a+\omega (M_{af}I_f)$
+The electrical motor steady-state equation is  <br/>
+$V_a = RI_a+\omega (M_{af}I_f)$  <br/>
 
-`V_a:drum motor voltage` <br/>
+`V_a: drum motor voltage` <br/>
+`R: resistance of the coil`  <br/>
+`ω: angular velocity`  <br/>
+`M: mutual induce stator-rotor`  <br/>
+`I: rotor current`
 
-As extracted from the steady-state ofTrain Dynamics Equations
+Motor torque <br/>
+$T = (M_{af}I_f)I_a$
+
+From the equations above, with the addition of a square friction-air drag term, the dynamics of the train can be described from the equations below 
 
 $$
 \begin{aligned}
